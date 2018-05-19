@@ -12,7 +12,7 @@ body {
 
 /* MENU */
 .menu {
-    padding: 5px 50px;
+    padding: 15px 50px;
     background: #fff;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -38,6 +38,8 @@ body {
 
 .menu ul {
     display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 .menu ul li {
     display: inline-block;
@@ -45,6 +47,11 @@ body {
     width: 25px;
     border-radius: 100%;
     cursor: pointer;
+}
+
+.menu #br {
+    margin: 0 20px;
+    width: 50px;
 }
 
 /* COLORS */
@@ -95,7 +102,7 @@ body {
 .CodeMirror {
     height: auto;
     width: auto;
-    border-radius: 15px;
+    border-radius: 6px;
     box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.3);
     font-size: 16px;
 }
