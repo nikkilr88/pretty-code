@@ -17,7 +17,10 @@
     <!-- NAV -->
     <nav class="menu">
         <span class="logo">code<span class="accent">Snap</span></span>
-        <button onclick="snap()">Snap Image</button>
+        <button onclick="snapJPEG()">Snap Image</button>
+        
+        <input id="br" type="range" min="0" max="15" step="1" value="6" data-suffix="px">
+
         <ul class="colors">
             <li data-color="#e74c3c"></li>
             <li data-color="#e67e22"></li>
@@ -33,9 +36,6 @@
             <textarea id="code">// Psst... Paste your code here.</textarea>
         </div>
     </div>
-    
-    <!-- IMG AREA -->
-    <div id="imgs"></div>
 
     <!-- CLONE -->
     <div class="clone"></div>
