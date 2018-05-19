@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="/bower_components/codemirror/theme/monokai.css">
     <link rel="stylesheet" href="/bower_components/codemirror/theme/blackboard.css">
     <link rel="stylesheet" href="/bower_components/codemirror/theme/xq-dark.css">
-
-        
     <link rel="stylesheet" href="css/styles.css">
-    <title>Home</title>
+
+    <title>codeSnap</title>
 </head>
 <body>
+    <!-- NAV -->
     <nav class="menu">
-        <span class="logo">code<span class="accent">Pic</span></span>
+        <span class="logo">code<span class="accent">Snap</span></span>
         <button onclick="snap()">Snap Image</button>
         <ul class="colors">
             <li data-color="#e74c3c"></li>
@@ -24,17 +24,23 @@
             <li data-color="#2ecc71"></li>
             <li data-color="#3498db"></li>
             <li data-color="#ffffff"></li>
-
         </ul>
     </nav>
-    <div class="clone"></div>
+
+    <!-- CODE SHIZZ -->
     <div class="container">        
         <div id="codeWrapper">
-<textarea id="code">// Psst... Paste your code here.</textarea>
+            <textarea id="code">// Psst... Paste your code here.</textarea>
         </div>
     </div>
     
+    <!-- IMG AREA -->
     <div id="imgs"></div>
+
+    <!-- CLONE -->
+    <div class="clone"></div>
+
+    <!-- LOAD SCRIPTS -->
     <script src="/bower_components/codemirror/lib/codemirror.js"></script>
     <script src="/bower_components/codemirror/mode/javascript/javascript.js"></script>
     <script src="/bower_components/dom-to-image/dist/dom-to-image.min.js"></script>
