@@ -1,0 +1,19 @@
+{
+  "name": "html-image",
+  "description": "",
+  "main": "app.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "^5.37.0",
+    "dom-to-image": "^2.6.0"
+  }
+}
