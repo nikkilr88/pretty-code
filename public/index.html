@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/bower_components/codemirror/theme/monokai.css">
     <link rel="stylesheet" href="/bower_components/codemirror/theme/blackboard.css">
     <link rel="stylesheet" href="/bower_components/codemirror/theme/xq-dark.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/styles.css">
 
     <title>codeSnap</title>
 </head>
@@ -17,17 +17,20 @@
     <!-- NAV -->
     <nav class="menu">
         <span class="logo">code<span class="accent">Snap</span></span>
-        <button onclick="snapJPEG()">Snap Image</button>
-        
-        <input id="br" type="range" min="0" max="15" step="1" value="6" data-suffix="px">
 
-        <ul class="colors">
-            <li data-color="#e74c3c"></li>
-            <li data-color="#e67e22"></li>
-            <li data-color="#2ecc71"></li>
-            <li data-color="#3498db"></li>
-            <li data-color="#ffffff"></li>
-        </ul>
+        <div class="nav-right">
+            <button onclick="snapJPEG()">Snap Image</button>
+            
+            <input id="br" type="range" min="0" max="15" step="1" value="6" data-suffix="px">
+            
+            <ul class="colors">
+                <li data-color="#e74c3c"></li>
+                <li data-color="#e67e22"></li>
+                <li data-color="#2ecc71"></li>
+                <li data-color="#3498db"></li>
+                <li data-color="#ffffff"></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- CODE SHIZZ -->
