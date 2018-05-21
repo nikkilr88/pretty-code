@@ -12,5 +12,9 @@
   "dependencies": {
     "express": "^4.16.3",
     "html-to-image": "0.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0"
   }
 }
