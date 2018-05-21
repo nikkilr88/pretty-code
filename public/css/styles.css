@@ -17,13 +17,17 @@ body {
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
 }
 
 .menu .logo {
-    margin-right: auto;
     color: #777;
+}
+
+.menu .nav-right {
+    display: flex;
+    align-items: center;
 }
 
 .menu button {
