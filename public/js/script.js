@@ -10,7 +10,7 @@ var myCodeMirror = CodeMirror.fromTextArea(code, {
     lineWrapping: true,
     theme: 'monokai'
 });
-console.log('define colors')
+
 // CHANGE CODE WRAPPER BG
 var colors = document.querySelectorAll('ul li');
 
@@ -26,30 +26,36 @@ br.addEventListener('mousemove', changeBR)
 
 // FUNCTION SHIZZ
 function changeBR() {
-    console.log(document.querySelector('.CodeMirror').style.borderRadius)
     document.querySelector('.CodeMirror').style.borderRadius = br.value + br.dataset.suffix;
 }
 
+// CHANGE BG
 function changeBG(color) {
     wrapper.style.background = color;
 }
 
+// CREATE DOWNLOAD LINK
+function createLink(dataUrl) {
+    var link = document.createElement('a');
+    link.download = 'code-snap.jpeg';
+    link.href = dataUrl;
+    link.click();
+}
+
+// SNAP IMG
 function snapJPEG() {
     let node = wrapper.cloneNode(true);
     node.style.margin = '0';
-    clone.innerHTML = '';
     clone.appendChild(node)
 
     domtoimage.toJpeg(node, {
-            quality: 1
-        })
-        .then(function(dataUrl) {
-            var link = document.createElement('a');
-            link.download = 'code-snap.jpeg';
-            link.href = dataUrl;
-            link.click();
-        })
-        .catch(function(error) {
-            console.error('Oops, something went wrong!', error);
-        });
+        quality: 1
+    })
+    .then(function(dataUrl) {
+        createLink();
+        clone.innerHTML = '';
+    })
+    .catch(function(error) {
+        console.error('Oops, something went wrong!', error);
+    });
 }
