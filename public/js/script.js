@@ -1,24 +1,24 @@
-const code = document.getElementById('code');
-const wrapper = document.querySelector('#codeWrapper');
-const clone = document.querySelector('.clone');
-const br = document.querySelector('#br');
+var code = document.getElementById('code');
+var wrapper = document.querySelector('#codeWrapper');
+var clone = document.querySelector('.clone');
+var br = document.querySelector('#br');
 
 // CODEMIRROE CONFIG
-const myCodeMirror = CodeMirror.fromTextArea(code, {
+var myCodeMirror = CodeMirror.fromTextArea(code, {
     lineNumbers: false,
     mode: 'javascript',
     lineWrapping: true,
     theme: 'monokai'
 });
-
+console.log('define colors')
 // CHANGE CODE WRAPPER BG
-const colors = document.querySelectorAll('ul li');
+var colors = document.querySelectorAll('ul li');
 
-colors.forEach(color => {
-    color.addEventListener('click', () => {
-        changeBG(color.dataset.color);
-    })
-})
+for(var i = 0; i < colors.length; i++) {
+    colors[i].addEventListener('click', function () {
+        changeBG(this.getAttribute('data-color'));
+    });
+}
 
 // CHANGE BORDER RADIUS
 br.addEventListener('change', changeBR)
@@ -26,6 +26,7 @@ br.addEventListener('mousemove', changeBR)
 
 // FUNCTION SHIZZ
 function changeBR() {
+    console.log(document.querySelector('.CodeMirror').style.borderRadius)
     document.querySelector('.CodeMirror').style.borderRadius = br.value + br.dataset.suffix;
 }
 
@@ -42,13 +43,13 @@ function snapJPEG() {
     domtoimage.toJpeg(node, {
             quality: 1
         })
-        .then(function (dataUrl) {
+        .then(function(dataUrl) {
             var link = document.createElement('a');
             link.download = 'code-snap.jpeg';
             link.href = dataUrl;
             link.click();
         })
-        .catch(function (error) {
+        .catch(function(error) {
             console.error('Oops, something went wrong!', error);
         });
 }
