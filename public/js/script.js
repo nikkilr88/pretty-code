@@ -1,6 +1,5 @@
 var code = document.getElementById('code');
 var wrapper = document.querySelector('#codeWrapper');
-var clone = document.querySelector('.clone');
 var br = document.querySelector('#br');
 
 // CODEMIRROE CONFIG
@@ -35,27 +34,19 @@ function changeBG(color) {
 }
 
 // CREATE DOWNLOAD LINK
-function createLink(dataUrl) {
-    var link = document.createElement('a');
-    link.download = 'code-snap.jpeg';
-    link.href = dataUrl;
-    link.click();
-}
+// function createLink(dataUrl) {
+//     var link = document.createElement('a');
+//     link.download = 'code-snap.jpeg';
+//     link.href = dataUrl;
+//     link.click();
+// }
 
-// SNAP IMG
-function snapJPEG() {
-    let node = wrapper.cloneNode(true);
-    node.style.margin = '0';
-    clone.appendChild(node)
-
-    domtoimage.toJpeg(node, {
-        quality: 1
+// SAVE IMAGE
+function saveBlob() {
+    domtoimage.toBlob(wrapper, {
+        style: { 'margin': '0' }
     })
-    .then(function(dataUrl) {
-        createLink();
-        clone.innerHTML = '';
-    })
-    .catch(function(error) {
-        console.error('Oops, something went wrong!', error);
+    .then(function(blob) {
+        window.saveAs(blob, 'code-snap.png');
     });
 }
