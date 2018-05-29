@@ -19,7 +19,7 @@
         <span class="logo">code<span class="accent">Snap</span></span>
 
         <div class="nav-right">
-            <button onclick="snapJPEG()">Snap Image</button>
+            <button onclick="saveBlob()">Snap Image</button>
             
             <input id="br" type="range" min="0" max="15" step="1" value="6" data-suffix="px">
             
@@ -40,10 +40,8 @@
         </div>
     </div>
 
-    <!-- CLONE -->
-    <div class="clone"></div>
-
     <!-- LOAD SCRIPTS -->
+    <script src="/bower_components/file-saver/FileSaver.js"></script>
     <script src="/bower_components/codemirror/lib/codemirror.js"></script>
     <script src="/bower_components/codemirror/mode/javascript/javascript.js"></script>
     <script src="/bower_components/dom-to-image/dist/dom-to-image.min.js"></script>
