@@ -3,7 +3,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    font-size: 1em;
 }
 
 .accent {
@@ -117,6 +116,7 @@ body {
     color: #fcfcfc;
     padding: 50px;
     width: auto;
+    max-width: 700px;
     display: table;
     margin: 0 auto;
 }
@@ -126,9 +126,9 @@ body {
     width: auto;
     -webkit-border-radius: 6px;
             border-radius: 6px;
-    -webkit-box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.3);
-    font-size: 16px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
 }
 
 .CodeMirror-scroll {
